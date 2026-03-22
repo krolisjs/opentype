@@ -1,0 +1,60 @@
+{
+  "name": "@krolis/opentype",
+  "version": "0.0.1",
+  "maintainers": [
+    {
+      "name": "army8735",
+      "email": "army8735@qq.com"
+    }
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc && rollup -c rollup.config.mjs",
+    "dev": "concurrently \"npm:dev:js\" \"npm:dev:types\"",
+    "dev:js": "rollup -c rollup.config.mjs -w",
+    "dev:types": "tsc -w --preserveWatchOutput",
+    "test": "cross-env TS_NODE_PROJECT=tsconfig.test.json NODE_OPTIONS='--import ts-node/esm --no-warnings' mocha"
+  },
+  "peerDependencies": {
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.8",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.3.1",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^25.0.10",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
+    "expect": "^30.2.0",
+    "mocha": "^10.4.0",
+    "rollup": "^4.46.2",
+    "rollup-plugin-dts": "^6.3.0",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.8.1",
+    "typescript": "^5.9.3",
+    "webstorm-disable-index": "^1.2.0"
+  },
+  "type": "module",
+  "main": "dist/index.iife.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.mjs",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js",
+      "script": "./dist/index.iife.js"
+    }
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "author": "army8735 <army8735@qq.com>",
+  "repository": "git@github.com:krolisjs/opentype.git"
+}

@@ -1,0 +1,14 @@
+# Created by .ignore support plugin (hsz.mobi)
+logs/
+*.log*
+node_modules/
+reports/
+coverage/
+.idea/
+.DS_Store
+*.swp
+/index.*
+dist/
+types/
+.rollup.cache/
+demo/
