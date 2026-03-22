@@ -17,13 +17,13 @@
     "dev:types": "tsc -w --preserveWatchOutput",
     "test": "cross-env TS_NODE_PROJECT=tsconfig.test.json NODE_OPTIONS='--import ts-node/esm --no-warnings' mocha"
   },
-  "peerDependencies": {
-  },
+  "peerDependencies": {},
   "dependencies": {},
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.8",
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^15.3.1",
+    "@rollup/plugin-terser": "^1.0.0",
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/mocha": "^10.0.10",
     "@types/node": "^25.0.10",

@@ -3,6 +3,7 @@ import json from '@rollup/plugin-json';
 import commonjs from '@rollup/plugin-commonjs';
 import nodeResolve from '@rollup/plugin-node-resolve';
 import dts from 'rollup-plugin-dts';
+import terser from '@rollup/plugin-terser';
 
 export default [
   {
@@ -18,6 +19,15 @@ export default [
         format: 'iife',
         sourcemap: true,
         name: 'krolisOpentype',
+      },
+      {
+        file: 'dist/index.iife.min.js',
+        format: 'iife',
+        sourcemap: true,
+        name: 'krolisOpentype',
+        plugins: [
+          terser(),
+        ],
       },
     ],
     plugins: [
